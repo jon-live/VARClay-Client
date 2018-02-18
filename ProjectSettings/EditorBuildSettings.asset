@@ -38,3 +38,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/UnityARKitPlugin/Examples/FaceTracking/FaceDirectionalLightEstimate.unity
     guid: 360fd35caee4f4e069485021a27c0b06
+  - enabled: 1
+    path: Assets/Scenes/VRClay.unity
+    guid: 9e83370d6abff47908ec160234b367bb
