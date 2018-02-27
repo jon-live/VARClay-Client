@@ -501,7 +501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1044e9f1cf946a298d566692a205c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 1985775462706256, guid: de6e276e3d38349489e57e7dce7b35f3,
+  playerPrefab: {fileID: 1008917110384436, guid: 9eaa049616a534c918004a812fe16f45,
     type: 2}
   m_HitTransform: {fileID: 432959980}
   maxRayDistance: 30

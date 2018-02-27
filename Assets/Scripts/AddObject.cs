@@ -17,7 +17,9 @@ namespace UnityEngine.XR.iOS
             if (hitResults.Count > 0) {
                 foreach (var hitResult in hitResults) {
                     Debug.Log ("Got hit!");
-                    go.transform.position = UnityARMatrixOps.GetPosition (hitResult.worldTransform);
+	                Vector3 position = UnityARMatrixOps.GetPosition (hitResult.worldTransform);
+	                position[1] = -position[1];
+                    go.transform.position = position;
                     go.transform.rotation = UnityARMatrixOps.GetRotation (hitResult.worldTransform);
                     Debug.Log (string.Format ("x:{0:0.######} y:{1:0.######} z:{2:0.######}", m_HitTransform.position.x, m_HitTransform.position.y, m_HitTransform.position.z));
                     return true;
