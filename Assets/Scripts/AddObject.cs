@@ -13,8 +13,8 @@ namespace UnityEngine.XR.iOS
         bool HitTestWithResultType (ARPoint point, ARHitTestResultType resultTypes)
         {
             List<ARHitTestResult> hitResults = UnityARSessionNativeInterface.GetARSessionNativeInterface ().HitTest (point, resultTypes);
-    		GameObject go = PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(0, 0, 0), Quaternion.identity, 0);
             if (hitResults.Count > 0) {
+                GameObject go = PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(0, 0, 0), Quaternion.identity, 0);
                 foreach (var hitResult in hitResults) {
                     Debug.Log ("Got hit!");
 	                Vector3 position = UnityARMatrixOps.GetPosition (hitResult.worldTransform);
@@ -68,9 +68,9 @@ namespace UnityEngine.XR.iOS
 
                     // prioritize reults types
                     ARHitTestResultType[] resultTypes = {
-                        ARHitTestResultType.ARHitTestResultTypeExistingPlaneUsingExtent, 
+//                        ARHitTestResultType.ARHitTestResultTypeExistingPlaneUsingExtent, 
                         // if you want to use infinite planes use this:
-                        //ARHitTestResultType.ARHitTestResultTypeExistingPlane,
+                        ARHitTestResultType.ARHitTestResultTypeExistingPlane,
                       //  ARHitTestResultType.ARHitTestResultTypeHorizontalPlane, 
                       //  ARHitTestResultType.ARHitTestResultTypeFeaturePoint
                     }; 
