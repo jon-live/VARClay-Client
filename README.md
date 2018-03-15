@@ -7,6 +7,7 @@
 
 ### Requirements
 - Unity3D Version 2017.1.0f3
+- Xcoce 
 - iPhone 8 Plus
 
 
@@ -21,4 +22,6 @@
 - Import `Photon Unity Networking`, set up AppID, and set up Region to 'US' in `Assets/Photon Unity Networking/Resources/PhotonServerSettings`.
 - Import `Unity ARKit Plugin`
 - Import `VRTK`
-- Import `Log Vieer`. This asset is for debugging on mobile device only.
+- Import `Log Viewer`. This asset is for debugging on mobile device only.
+  - Create reporter from menu (Reporter->Create) at first scene game start.
+  - Set the ” Scrip execution order ” in (Edit -> Project Settings ) of Reporter.cs to be the highest.
