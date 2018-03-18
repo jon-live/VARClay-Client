@@ -7,11 +7,11 @@ PlayerSettings:
   productGUID: 6f1c150c1d09e34438d8b828344ac6d5
   AndroidProfiler: 0
   defaultScreenOrientation: 4
-  targetDevice: 2
+  targetDevice: 0
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Unity Technologies
-  productName: Unity ARKit Plugin
+  companyName: UC Berkeley School of Information
+  productName: ARClay
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -142,9 +142,9 @@ PlayerSettings:
   resolutionScalingMode: 0
   applicationIdentifier:
     Android: com.Company.ProductName
-    Standalone: unity.Unity Technologies.Native Rendering Plugin Example
+    Standalone: com.leonlee.arclay
     Tizen: com.Company.ProductName
-    iOS: com.unity.arkitscene
+    iOS: com.leonlee.arclay
     tvOS: com.Company.ProductName
   buildNumber:
     iOS: 0
