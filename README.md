@@ -31,6 +31,12 @@
 
 
 #### Xcode and Unity Integration
+[Reference](https://github.com/jiulongw/swift-unity)
+- Copy 
+
+- Disable Metal API Validation. Go to Xcode->Product->Scheme->Edit Scheme, disable Metal API Validation. 
+
+
 
 
 ### Architecure
