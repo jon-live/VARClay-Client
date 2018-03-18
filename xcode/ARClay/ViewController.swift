@@ -7,10 +7,10 @@
 //
 
 import UIKit
-import SceneKit
+//import SceneKit
 import ARKit
 
-class ViewController: UIViewController, ARSCNViewDelegate {
+class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +18,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             appDelegate.startUnity()
             
             NotificationCenter.default.addObserver(self, selector: #selector(handleUnityReady), name: NSNotification.Name("UnityReady"), object: nil)
-            NotificationCenter.default.addObserver(self, selector: #selector(handleUnityToggleRotation(_:)), name: NSNotification.Name("UnityToggleRotation"), object: nil)
+//            NotificationCenter.default.addObserver(self, selector: #selector(handleUnityToggleRotation(_:)), name: NSNotification.Name("UnityToggleRotation"), object: nil)
         }
     }
     
@@ -26,12 +26,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         showUnitySubView()
     }
     
-    @objc func handleUnityToggleRotation(_ n: NSNotification) {
-        if let isOn = n.userInfo?["isOn"] as? NSNumber {
-            print("fadf")
-//            rotateSwitch.isOn = isOn.boolValue
-        }
-    }
+//    @objc func handleUnityToggleRotation(_ n: NSNotification) {
+//        if let isOn = n.userInfo?["isOn"] as? NSNumber {
+//            print("fadf")
+////            rotateSwitch.isOn = isOn.boolValue
+//        }
+//    }
     
     @IBAction func handleSwitchValueChanged(sender: UISwitch) {
         UnityPostMessage("NATIVE_BRIDGE", "RotateCube", sender.isOn ? "start" : "stop")

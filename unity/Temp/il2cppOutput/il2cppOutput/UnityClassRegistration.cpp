@@ -164,7 +164,7 @@ class BillboardRenderer;
 class LineRenderer; template <> void RegisterClass<LineRenderer>();
 class MeshRenderer; template <> void RegisterClass<MeshRenderer>();
 class ParticleRenderer; 
-class ParticleSystemRenderer; template <> void RegisterClass<ParticleSystemRenderer>();
+class ParticleSystemRenderer; 
 class SkinnedMeshRenderer; template <> void RegisterClass<SkinnedMeshRenderer>();
 class SpriteMask; 
 class SpriteRenderer; template <> void RegisterClass<SpriteRenderer>();
@@ -205,7 +205,7 @@ class AnimationClip; template <> void RegisterClass<AnimationClip>();
 class PreviewAnimationClip; 
 class NavMeshData; 
 class OcclusionCullingData; 
-class PhysicMaterial; template <> void RegisterClass<PhysicMaterial>();
+class PhysicMaterial; 
 class PhysicsMaterial2D; template <> void RegisterClass<PhysicsMaterial2D>();
 class PreloadData; template <> void RegisterClass<PreloadData>();
 class RuntimeAnimatorController; template <> void RegisterClass<RuntimeAnimatorController>();
@@ -274,7 +274,7 @@ void RegisterAllClasses()
 {
 void RegisterBuiltinTypes();
 RegisterBuiltinTypes();
-	//Total: 101 non stripped classes
+	//Total: 99 non stripped classes
 	//0. Behaviour
 	RegisterClass<Behaviour>();
 	//1. Unity::Component
@@ -457,25 +457,21 @@ RegisterBuiltinTypes();
 	RegisterClass<ScriptMapper>();
 	//90. UnityConnectSettings
 	RegisterClass<UnityConnectSettings>();
-	//91. ParticleSystemRenderer
-	RegisterClass<ParticleSystemRenderer>();
-	//92. PhysicsMaterial2D
+	//91. PhysicsMaterial2D
 	RegisterClass<PhysicsMaterial2D>();
-	//93. BoxCollider2D
+	//92. BoxCollider2D
 	RegisterClass<BoxCollider2D>();
-	//94. AnimatorController
+	//93. AnimatorController
 	RegisterClass<AnimatorController>();
-	//95. RuntimeAnimatorController
+	//94. RuntimeAnimatorController
 	RegisterClass<RuntimeAnimatorController>();
-	//96. Avatar
+	//95. Avatar
 	RegisterClass<Avatar>();
-	//97. AudioListener
+	//96. AudioListener
 	RegisterClass<AudioListener>();
-	//98. FlareLayer
+	//97. FlareLayer
 	RegisterClass<FlareLayer>();
-	//99. PhysicMaterial
-	RegisterClass<PhysicMaterial>();
-	//100. NavMeshProjectSettings
+	//98. NavMeshProjectSettings
 	RegisterClass<NavMeshProjectSettings>();
 
 }

@@ -49,6 +49,7 @@
 		357BD6A02059EA3E0059A302 = {isa = PBXBuildFile; fileRef = 357BD69E2059EA3E0059A302 /* LaunchScreen.storyboard */; };
 		35C8E0FD205E3F110047A0FF /* Unity in Resources */ = {isa = PBXBuildFile; fileRef = 35C8E0FC205E3F110047A0FF /* Unity */; };
 		35C8E101205E47750047A0FF /* ARClay.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 35C8E100205E47750047A0FF /* ARClay.xcconfig */; };
+		35F4C8A3205ECABB00A0FA96 /* UnityUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35F4C8A2205ECABA00A0FA96 /* UnityUtils.mm */; };
 		37B6426CA91032487FE4BDC0 /* Il2CppCompilerCalculateTypeValues_14Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9B84BF9BDF718E73B5BA93E /* Il2CppCompilerCalculateTypeValues_14Table.cpp */; };
 		37F7414BBB054EB4BC6ED310 /* Bulk_UnityEngine_3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52154AB9B66A699FAAD367EA /* Bulk_UnityEngine_3.cpp */; };
 		385E4C6997E5D59AFE9A36B6 /* Bulk_mscorlib_4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96FE4E8CB7C62A81C44D6BAF /* Bulk_mscorlib_4.cpp */; };
@@ -316,6 +317,7 @@
 		35C8E100205E47750047A0FF /* ARClay.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ARClay.xcconfig; sourceTree = "<group>"; };
 		35DF4B20B6D7732FC06382C0 /* il2cpp-codegen-il2cpp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "il2cpp-codegen-il2cpp.h"; path = "ARClay/Unity/Libraries/libil2cpp/include/codegen/il2cpp-codegen-il2cpp.h"; sourceTree = SOURCE_ROOT; };
 		35EF449B9E1AD9C06B9C5D20 /* Il2CppGenericContextCompare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Il2CppGenericContextCompare.h; path = ARClay/Unity/Libraries/libil2cpp/include/metadata/Il2CppGenericContextCompare.h; sourceTree = SOURCE_ROOT; };
+		35F4C8A2205ECABA00A0FA96 /* UnityUtils.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = UnityUtils.mm; path = ARClay/Unity/UnityUtils.mm; sourceTree = "<group>"; };
 		362343ECBB5C2751D904225A /* Il2CppSignatureCompare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Il2CppSignatureCompare.h; path = ARClay/Unity/Libraries/libil2cpp/include/metadata/Il2CppSignatureCompare.h; sourceTree = SOURCE_ROOT; };
 		3686445F90BADCE6AF976223 /* UnityForwardDecls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UnityForwardDecls.h; path = ARClay/Unity/Classes/Unity/UnityForwardDecls.h; sourceTree = SOURCE_ROOT; };
 		36B241628168F297151937E2 /* UnityRendering.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UnityRendering.h; path = ARClay/Unity/Classes/Unity/UnityRendering.h; sourceTree = SOURCE_ROOT; };
@@ -520,7 +522,7 @@
 		912B4D7A85A4E0C2CB0DCEF6 /* Time-c-api.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Time-c-api.h"; path = "ARClay/Unity/Libraries/libil2cpp/include/os/c-api/Time-c-api.h"; sourceTree = SOURCE_ROOT; };
 		912B4F78A7154A470AA000FE /* assembly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = assembly.h; path = ARClay/Unity/Libraries/libil2cpp/include/debugger/protocol/commands/assembly.h; sourceTree = SOURCE_ROOT; };
 		913E4A11A1A5EA4F60A3A673 /* CVTextureCache.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = CVTextureCache.mm; path = ARClay/Unity/Classes/Unity/CVTextureCache.mm; sourceTree = SOURCE_ROOT; };
-		91BE4CD79871EB07F63E911C /* libil2cpp.def */ = {isa = PBXFileReference; lastKnownFileType = file; name = libil2cpp.def; path = ARClay/Unity/Libraries/libil2cpp/include/libil2cpp.def; sourceTree = SOURCE_ROOT; };
+		91BE4CD79871EB07F63E911C /* libil2cpp.def */ = {isa = PBXFileReference; lastKnownFileType = text; name = libil2cpp.def; path = ARClay/Unity/Libraries/libil2cpp/include/libil2cpp.def; sourceTree = SOURCE_ROOT; };
 		92114251B56EF5452DA96DC3 /* LinuxNetworkInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LinuxNetworkInterface.h; path = ARClay/Unity/Libraries/libil2cpp/include/icalls/System/System.Net.NetworkInformation/LinuxNetworkInterface.h; sourceTree = SOURCE_ROOT; };
 		92694A9FB45BB2F42582B1EE /* RegisterMonoModules.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RegisterMonoModules.h; path = ARClay/Unity/Libraries/RegisterMonoModules.h; sourceTree = SOURCE_ROOT; };
 		926E4FABBDFB918D02D5ED1C /* ThreadPoolMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ThreadPoolMacros.h; path = ARClay/Unity/Libraries/libil2cpp/include/mono/ThreadPool/ThreadPoolMacros.h; sourceTree = SOURCE_ROOT; };
@@ -766,7 +768,7 @@
 		F452468DB322A530816A3FC5 /* ErrorCodes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ErrorCodes.h; path = ARClay/Unity/Libraries/libil2cpp/include/os/ErrorCodes.h; sourceTree = SOURCE_ROOT; };
 		F45749B88AB2076D538C3C04 /* deflate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = deflate.h; path = ARClay/Unity/Libraries/libil2cpp/include/external/zlib/deflate.h; sourceTree = SOURCE_ROOT; };
 		F47F442986612A8B9D2377A9 /* FieldInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FieldInfo.h; path = ARClay/Unity/Libraries/libil2cpp/include/icalls/mscorlib/System.Reflection/FieldInfo.h; sourceTree = SOURCE_ROOT; };
-		F49C4DB4BD32F843E14EEF53 /* libil2cpp.icalls */ = {isa = PBXFileReference; lastKnownFileType = file; name = libil2cpp.icalls; path = ARClay/Unity/Libraries/libil2cpp/include/libil2cpp.icalls; sourceTree = SOURCE_ROOT; };
+		F49C4DB4BD32F843E14EEF53 /* libil2cpp.icalls */ = {isa = PBXFileReference; lastKnownFileType = text; name = libil2cpp.icalls; path = ARClay/Unity/Libraries/libil2cpp/include/libil2cpp.icalls; sourceTree = SOURCE_ROOT; };
 		F4B54389B39B47831671EC96 /* UnityAppController+ViewHandling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UnityAppController+ViewHandling.h"; path = "ARClay/Unity/Classes/UI/UnityAppController+ViewHandling.h"; sourceTree = SOURCE_ROOT; };
 		F54B4788943B942A7B0024C0 /* AppDelegateListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegateListener.h; path = ARClay/Unity/Classes/PluginBase/AppDelegateListener.h; sourceTree = SOURCE_ROOT; };
 		F5F14C6CB6BE4F6CA8969C22 /* MemoryInformation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MemoryInformation.h; path = ARClay/Unity/Libraries/libil2cpp/include/vm/MemoryInformation.h; sourceTree = SOURCE_ROOT; };
@@ -1189,6 +1191,7 @@
 		357BD6872059EA3E0059A302 = {
 			isa = PBXGroup;
 			children = (
+				35F4C8A2205ECABA00A0FA96 /* UnityUtils.mm */,
 				357BD6922059EA3E0059A302 /* ARClay */,
 				357BD6912059EA3E0059A302 /* Products */,
 			);
@@ -2398,6 +2401,7 @@
 				E9054B209D00AF2F0D46E578 /* DisplayManager.mm in Sources */,
 				C67A4F458D243A6FF28E543E /* EAGLContextHelper.mm in Sources */,
 				2F2A4D80B59A3A2594FC76BD /* Filesystem.mm in Sources */,
+				35F4C8A3205ECABB00A0FA96 /* UnityUtils.mm in Sources */,
 				2AEC4CB7B78D261C9195E363 /* FullScreenVideoPlayer.mm in Sources */,
 				A1F04590855A91A922CAB29A /* GlesHelper.mm in Sources */,
 				2B1C479889CC41B66792A5FB /* InternalProfiler.cpp in Sources */,
@@ -2554,6 +2558,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5N38Z4JN92;
 				INFOPLIST_FILE = ARClay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leonlee.ARClay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2569,6 +2574,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5N38Z4JN92;
 				INFOPLIST_FILE = ARClay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leonlee.ARClay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
