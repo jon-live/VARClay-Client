@@ -654,7 +654,6 @@ UnityEngine.Object::FindObjectsOfTypeIncludingAssets
 UnityEngine.Object::FindSceneObjectsOfType
 UnityEngine.ParticleSystem::get_isPaused
 UnityEngine.ParticleSystem::get_isStopped
-UnityEngine.ParticleSystem::get_particleCount
 UnityEngine.ParticleSystem::Play
 UnityEngine.ParticleSystem::SetParticles
 UnityEngine.ParticleSystem::Stop

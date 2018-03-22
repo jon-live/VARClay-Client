@@ -6,16 +6,13 @@ using UnityEngine.XR.iOS;
 public class PaintManager : MonoBehaviour
 {
 	
-	public ParticleSystem particleSystemTemplate;
+	public GameObject gameObject;
 
-	private bool newPaintVertices;
 	private bool paintingOn;
 	private Color paintColor;
 	private Vector3 previousPosition;
+	private List<GameObject> gameObjectList;
 
-	private List<ParticleSystem> particleSystemList; // Stores all particle systems
-	private List<Vector3> currVertices; // Stores current camera positions to paint
-	private ParticleSystem ps; // Stores current particle system
 	
 	
 //	public GameObject cubeObj;
@@ -34,32 +31,12 @@ public class PaintManager : MonoBehaviour
 	void Start ()
 	{
 		paintingOn = false;
-		newPaintVertices = false;
-		particleSystemList = new List<ParticleSystem>();
-		ps = Instantiate(particleSystemTemplate);
-		currVertices = new List<Vector3>();
 		paintColor = Color.green;
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (paintingOn && newPaintVertices)
-		{
-			if (currVertices.Count > 0)
-			{
-				ParticleSystem.Particle[] particles = new ParticleSystem.Particle[currVertices.Count];
-				int index = 0;
-				foreach (Vector3 vtx in currVertices)
-				{
-					particles[index].position = vtx;
-					particles[index].color = paintColor;
-					particles[index].size = 0.1f;
-					index++;
-				}
-				ps.SetParticles(particles, currVertices.Count);
-				newPaintVertices = false;
-			}
-		}
 	}
 	
 	public void TogglePaint()
@@ -69,42 +46,39 @@ public class PaintManager : MonoBehaviour
 
 	public void RandomizeColor()
 	{
-		if (ps.particleCount > 0)
-		{
-			SaveParticleSystem();
-		}
 		paintColor = Random.ColorHSV();
 		
 	}
 
 	public void Reset()
 	{
-		foreach (ParticleSystem p in particleSystemList)
+		foreach (GameObject p in gameObjectList)
 		{
 			Destroy(p);
 		}
 
-		particleSystemList = new List<ParticleSystem>();
-		
-		Destroy(ps);
-		ps = Instantiate(particleSystemTemplate);
-		currVertices = new List<Vector3>();
+		gameObjectList= new List<GameObject>();
+
 	}
 
-	private void SaveParticleSystem()
+	private void SaveGameObject()
 	{
-		particleSystemList.Add(ps);
-		ps = Instantiate(particleSystemTemplate);
-		currVertices = new List<Vector3>();
+		gameObjectList.Add(gameObject);
 	}
 	
 	private void ARFrameUpdated(UnityARCamera arCamera) {
-		Vector3 paintPosition = GetCameraPosition(arCamera) + (Camera.main.transform.forward * 0.2f);
-		if (Vector3.Distance(paintPosition, previousPosition) > 0.025f)
+		Vector3 paintPosition = GetCameraPosition(arCamera) + (Camera.main.transform.forward * 0.3f);
+		if (paintingOn && Vector3.Distance(paintPosition, previousPosition) > 0.03f)
 		{
-			if (paintingOn) currVertices.Add(paintPosition);
+//			Instantiate(gameObject, paintPosition, transform.rotation);
+			GameObject go = PhotonNetwork.Instantiate(this.gameObject.name, new Vector3(0, 0, 0), Quaternion.identity, 0);
+//			Vector3 temp = paintPosition;
+//			temp[1] += 2.0f;
+//			temp[0] += 1.0f;
+//			temp[2] += 1.0f;
+			go.transform.position = paintPosition;
+			go.transform.rotation = transform.rotation;
 			previousPosition = paintPosition;
-			newPaintVertices = true;
 		}
 	}
 	

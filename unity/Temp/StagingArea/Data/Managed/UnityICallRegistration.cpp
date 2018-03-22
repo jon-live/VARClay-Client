@@ -2966,10 +2966,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_ParticleSystem_get_isStopped();
 		Register_UnityEngine_ParticleSystem_get_isStopped();
 
-		//System.Int32 UnityEngine.ParticleSystem::get_particleCount()
-		void Register_UnityEngine_ParticleSystem_get_particleCount();
-		Register_UnityEngine_ParticleSystem_get_particleCount();
-
 		//System.Void UnityEngine.ParticleSystem::Play(System.Boolean)
 		void Register_UnityEngine_ParticleSystem_Play();
 		Register_UnityEngine_ParticleSystem_Play();

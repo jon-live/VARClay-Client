@@ -111,6 +111,7 @@
 <type fullname="ExitGames.UtilityScripts.ButtonInsideScrollList" preserve="all"/>
 <type fullname="ExitGames.UtilityScripts.TextButtonTransition" preserve="all"/>
 <type fullname="ExitGames.UtilityScripts.TextToggleIsOnTransition" preserve="all"/>
+<type fullname="Com.ISchool.VARClay.Launcher" preserve="all"/>
 <type fullname="PaintManager" preserve="all"/>
 <type fullname="UnityEngine.XR.iOS.ConnectToEditor" preserve="all"/>
 <type fullname="UnityEngine.XR.iOS.EditorHitTest" preserve="all"/>

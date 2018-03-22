@@ -416,6 +416,48 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 327034345}
+--- !u!1 &394416774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 394416776}
+  - component: {fileID: 394416775}
+  m_Layer: 0
+  m_Name: PhotonManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &394416775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 394416774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9bd93a1b48e48a390d77694b6e2c62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Loglevel: 1
+  MaxPlayersPerRoom: 4
+--- !u!4 &394416776
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 394416774}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 807.28876, y: 266.90088, z: -5.605591}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &446198930
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,8 +682,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1827743172}
-        m_MethodName: RandomizeColor
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1052,8 +1094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d96da707baf84cd98a319ac036037cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleSystemTemplate: {fileID: 198458659787059530, guid: aad55399a91df46a9b8803dc76c683d5,
-    type: 2}
+  gameObject: {fileID: 1370788913304070, guid: 2b39241c24fe941dcb0bc0cb820ec141, type: 2}
 --- !u!1 &2059630326
 GameObject:
   m_ObjectHideFlags: 0
@@ -1130,8 +1171,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1827743172}
-        m_MethodName: Reset
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

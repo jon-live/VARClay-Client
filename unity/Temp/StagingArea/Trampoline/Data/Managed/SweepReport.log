@@ -11,7 +11,7 @@ Summary:
     Generic Abstract Classes = 1
     Attributes = 144
   Total Field Removals = 621
-  Total Method Removals = 11633
+  Total Method Removals = 11636
 ---------------------------------------------------
 ---------------------------------------------------
 Assembly: Mono.Security
@@ -9046,7 +9046,7 @@ Summary:
     Generic Abstract Classes = 0
     Attributes = 44
   Total Field Removals = 48
-  Total Method Removals = 5392
+  Total Method Removals = 5395
   References Removed = 0
 ---------------------------------------------------
     <PrivateImplementationDetails>
@@ -12399,6 +12399,7 @@ Summary:
         get_loop()
         get_maxParticles()
         get_noise()
+        get_particleCount()
         get_playbackSpeed()
         get_playOnAwake()
         get_randomSeed()
@@ -12656,12 +12657,14 @@ Summary:
         set_angularVelocity(System.Single)
         set_angularVelocity3D(UnityEngine.Vector3)
         set_axisOfRotation(UnityEngine.Vector3)
+        set_color(UnityEngine.Color32)
         set_lifetime(System.Single)
         set_randomSeed(System.UInt32)
         set_randomValue(System.Single)
         set_remainingLifetime(System.Single)
         set_rotation(System.Single)
         set_rotation3D(UnityEngine.Vector3)
+        set_size(System.Single)
         set_startLifetime(System.Single)
         set_startSize3D(UnityEngine.Vector3)
         set_velocity(UnityEngine.Vector3)
