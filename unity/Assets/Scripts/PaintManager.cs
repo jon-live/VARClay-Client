@@ -92,8 +92,16 @@ public class PaintManager : MonoBehaviour
 
 	private void ReceiveCommand(string command)
 	{
-		Debug.Log("I got a command");
-		Debug.Log(command);
+		if (command == "drawOn")
+		{
+			paintingOn = true;
+		}
+		else if (command == "drawOff")
+		{
+			paintingOn = false;
+		}
+
+		
 	}
 	
 }
