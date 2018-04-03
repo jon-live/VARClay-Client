@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.iOS;
+using System.Runtime.InteropServices;
+
 
 public class PaintManager : MonoBehaviour
 {
@@ -87,4 +89,11 @@ public class PaintManager : MonoBehaviour
 		matrix.SetColumn (3, cam.worldTransform.column3);
 		return UnityARMatrixOps.GetPosition (matrix);
 	}
+
+	private void ReceiveCommand(string command)
+	{
+		Debug.Log("I got a command");
+		Debug.Log(command);
+	}
+	
 }
