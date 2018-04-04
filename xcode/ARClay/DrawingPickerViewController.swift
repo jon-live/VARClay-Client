@@ -10,10 +10,11 @@ import UIKit
 
 class DrawingPickerViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
+    var currentDrawingModel: String!
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let drawingModels = ["Cube", "phere", "Tree", "XXX1", "XXX2", "XXX3" ]
+    let drawingModels = ["Cube", "Sphere", "Tree", "XXX1", "XXX2", "XXX3" ]
     let drawingImages: [UIImage] = [
         UIImage(named: "cube")!,
         UIImage(named: "sphere")!,
@@ -25,6 +26,8 @@ class DrawingPickerViewController: UIViewController, UICollectionViewDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Init currentDrawingModel with default value "cube"
+        currentDrawingModel = "cube"
         collectionView.dataSource = self
         collectionView.delegate = self
         var layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
@@ -57,11 +60,15 @@ class DrawingPickerViewController: UIViewController, UICollectionViewDelegate, U
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.layer.borderColor = UIColor.gray.cgColor
         cell?.layer.borderWidth = 2
+        currentDrawingModel = drawingModels[indexPath.row]
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.layer.borderColor = UIColor.lightGray.cgColor
         cell?.layer.borderWidth = 0.5
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     }
 }

@@ -92,16 +92,17 @@ public class PaintManager : MonoBehaviour
 
 	private void ReceiveCommand(string command)
 	{
-		if (command == "drawOn")
+		var commands = command.Split();
+		switch (commands[0])
 		{
-			paintingOn = true;
+			case "drawOn":
+				paintingOn = true;
+				gameObject = (GameObject) Resources.Load(commands[1], typeof(GameObject));
+				break;
+			case "drawOff":
+				paintingOn = false;
+				break;
 		}
-		else if (command == "drawOff")
-		{
-			paintingOn = false;
-		}
-
-		
 	}
 	
 }

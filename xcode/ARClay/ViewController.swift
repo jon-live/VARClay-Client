@@ -13,8 +13,10 @@ import ARKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var drawButton: UIButton!
+    var drawingModel: String!
     override func viewDidLoad() {
         super.viewDidLoad()
+        drawingModel = "Cube"
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
             appDelegate.startUnity()
             
@@ -24,19 +26,22 @@ class ViewController: UIViewController {
         
         drawButton.addTarget(self, action: #selector(holdRelease), for: .touchUpInside);
         drawButton.addTarget(self, action: #selector(HoldDown), for: .touchDown)
-        
-        
     }
 
     //target functions
     @objc func HoldDown(sender:UIButton)
     {
-        UnityPostMessage("PaintManager", "ReceiveCommand", "drawOn")
+        if drawingModel == "XXX1" || drawingModel == "XXX1" || drawingModel == "XXX2" {
+            drawingModel = "Sphere"
+        }
+        let commands = "drawOn" + " " + drawingModel
+        UnityPostMessage("PaintManager", "ReceiveCommand", commands)
     }
     
     @objc func holdRelease(sender:UIButton)
     {
-        UnityPostMessage("PaintManager", "ReceiveCommand", "drawOff")
+        let commands = "drawOff" + " " + drawingModel
+        UnityPostMessage("PaintManager", "ReceiveCommand", commands)
     }
     
     
@@ -69,5 +74,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func unwindSegue(_ sender: UIStoryboardSegue) {
+        if let senderVC = sender.source as? DrawingPickerViewController {
+            drawingModel = senderVC.currentDrawingModel
+        }
     }
 }
