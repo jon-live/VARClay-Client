@@ -14,9 +14,13 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var drawButton: UIButton!
     var drawingModel: String!
+    var drawingColor: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         drawingModel = "Cube"
+        drawingColor = "255-255-255"
+
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
             appDelegate.startUnity()
             
@@ -34,13 +38,14 @@ class ViewController: UIViewController {
         if drawingModel == "XXX1" || drawingModel == "XXX1" || drawingModel == "XXX2" {
             drawingModel = "Sphere"
         }
-        let commands = "drawOn" + " " + drawingModel
+//        String stringColor =
+        let commands = "drawOn" + " " + drawingModel + " " + drawingColor
         UnityPostMessage("PaintManager", "ReceiveCommand", commands)
     }
     
     @objc func holdRelease(sender:UIButton)
     {
-        let commands = "drawOff" + " " + drawingModel
+        let commands = "drawOff" + " " + drawingModel + " " + drawingColor
         UnityPostMessage("PaintManager", "ReceiveCommand", commands)
     }
     
@@ -76,6 +81,7 @@ class ViewController: UIViewController {
     @IBAction func unwindSegue(_ sender: UIStoryboardSegue) {
         if let senderVC = sender.source as? DrawingPickerViewController {
             drawingModel = senderVC.currentDrawingModel
+            drawingColor = senderVC.currentDrawingColor
         }
     }
 }

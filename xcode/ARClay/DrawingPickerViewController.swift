@@ -11,6 +11,7 @@ import UIKit
 class DrawingPickerViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     var currentDrawingModel: String!
+    var currentDrawingColor: String!
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -40,6 +41,8 @@ class DrawingPickerViewController: UIViewController, UICollectionViewDelegate, U
         super.viewDidLoad()
         // Init currentDrawingModel with default value "cube"
         currentDrawingModel = "cube"
+        // Init currentDrawingColor with default value "white"
+        currentDrawingColor = "255-255-255"
         collectionView.dataSource = self
         collectionView.delegate = self
         var layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
@@ -105,6 +108,7 @@ class DrawingPickerViewController: UIViewController, UICollectionViewDelegate, U
         redColor = redSlider.value
         greenColor = greenSlider.value
         blueColor = blueSlider.value
+        currentDrawingColor = String(Int(redColor * 255)) + "-" +  String(Int(greenColor * 255)) + "-" + String(Int(blueColor * 255))
         changeDisplayLabelColor()
     }
     

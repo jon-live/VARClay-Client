@@ -93,11 +93,19 @@ public class PaintManager : MonoBehaviour
 	private void ReceiveCommand(string command)
 	{
 		var commands = command.Split();
+		float redColor = float.Parse(commands[2].Split('-')[0]) / 255.0f;
+		float greenColor = float.Parse(commands[2].Split('-')[1]) / 255.0f;
+		float blueColor = float.Parse(commands[2].Split('-')[2]) / 255.0f;
+		paintColor.r = redColor;
+		paintColor.g = greenColor;
+		paintColor.b = blueColor;
+
 		switch (commands[0])
 		{
 			case "drawOn":
 				paintingOn = true;
 				gameObject = (GameObject) Resources.Load(commands[1], typeof(GameObject));
+				gameObject.GetComponent<Renderer>().material.color = paintColor;
 				break;
 			case "drawOff":
 				paintingOn = false;
