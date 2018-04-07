@@ -14,6 +14,18 @@ class DrawingPickerViewController: UIViewController, UICollectionViewDelegate, U
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var redLabel: UILabel!
+    @IBOutlet weak var greenLabel: UILabel!
+    @IBOutlet weak var blueLabel: UILabel!
+    @IBOutlet weak var redSlider: UISlider!
+    @IBOutlet weak var greenSlider: UISlider!
+    @IBOutlet weak var blueSlider: UISlider!
+    @IBOutlet weak var displayLabel: UILabel!
+    
+    var redColor : Float = 0
+    var greenColor : Float = 0
+    var blueColor : Float = 0
+    
     let drawingModels = ["Cube", "Sphere", "Tree", "XXX1", "XXX2", "XXX3" ]
     let drawingImages: [UIImage] = [
         UIImage(named: "cube")!,
@@ -70,5 +82,39 @@ class DrawingPickerViewController: UIViewController, UICollectionViewDelegate, U
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    }
+    
+    @IBAction func redSliderAction(_ sender: UISlider) {
+        changeColors()
+    }
+    
+    @IBAction func greenSliderAction(_ sender: UISlider) {
+        changeColors()
+    }
+    
+    @IBAction func blueSliderAction(_ sender: UISlider) {
+        changeColors()
+    }
+    
+    func changeDisplayLabelColor() {
+        displayLabel.backgroundColor = UIColor(red: CGFloat(redColor), green: CGFloat(greenColor), blue: CGFloat(blueColor), alpha: 1.0)
+        changeLabelNumbers()
+    }
+    
+    func changeColors() {
+        redColor = redSlider.value
+        greenColor = greenSlider.value
+        blueColor = blueSlider.value
+        changeDisplayLabelColor()
+    }
+    
+    func changeLabelNumbers() {
+        var roundedRed = String(format: "%0.0f", redColor * 255)
+        var roundedGreen = String(format: "%0.0f", greenColor * 255)
+        var roundedBlue = String(format: "%0.0f", blueColor * 255)
+        
+        redLabel.text = "Red: \(roundedRed)"
+        greenLabel.text = "Green: \(roundedGreen)"
+        blueLabel.text = "Blue: \(roundedBlue)"
     }
 }
