@@ -44,12 +44,13 @@
 		357BD6942059EA3E0059A302 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357BD6932059EA3E0059A302 /* AppDelegate.swift */; };
 		357BD6962059EA3E0059A302 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 357BD6952059EA3E0059A302 /* art.scnassets */; };
 		357BD6982059EA3E0059A302 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357BD6972059EA3E0059A302 /* ViewController.swift */; };
-		357BD69B2059EA3E0059A302 = {isa = PBXBuildFile; fileRef = 357BD6992059EA3E0059A302 /* Main.storyboard */; };
+		357BD69B2059EA3E0059A302 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 357BD6992059EA3E0059A302 /* Main.storyboard */; };
 		357BD69D2059EA3E0059A302 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 357BD69C2059EA3E0059A302 /* Assets.xcassets */; };
-		357BD6A02059EA3E0059A302 = {isa = PBXBuildFile; fileRef = 357BD69E2059EA3E0059A302 /* LaunchScreen.storyboard */; };
+		357BD6A02059EA3E0059A302 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 357BD69E2059EA3E0059A302 /* LaunchScreen.storyboard */; };
 		35C8E0FD205E3F110047A0FF /* Unity in Resources */ = {isa = PBXBuildFile; fileRef = 35C8E0FC205E3F110047A0FF /* Unity */; };
 		35C8E101205E47750047A0FF /* ARClay.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 35C8E100205E47750047A0FF /* ARClay.xcconfig */; };
 		35CBFA222074401C0081D53F /* DrawingPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CBFA212074401C0081D53F /* DrawingPickerViewController.swift */; };
+		35CBFA262079B5770081D53F /* SelectingModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CBFA252079B5760081D53F /* SelectingModelViewController.swift */; };
 		35F4C8A3205ECABB00A0FA96 /* UnityUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35F4C8A2205ECABA00A0FA96 /* UnityUtils.mm */; };
 		35F8058B2073C092009A650D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F8058A2073C092009A650D /* CollectionViewCell.swift */; };
 		37B6426CA91032487FE4BDC0 /* Il2CppCompilerCalculateTypeValues_14Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9B84BF9BDF718E73B5BA93E /* Il2CppCompilerCalculateTypeValues_14Table.cpp */; };
@@ -318,6 +319,7 @@
 		35C8E0FC205E3F110047A0FF /* Unity */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Unity; sourceTree = "<group>"; };
 		35C8E100205E47750047A0FF /* ARClay.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ARClay.xcconfig; sourceTree = "<group>"; };
 		35CBFA212074401C0081D53F /* DrawingPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingPickerViewController.swift; sourceTree = "<group>"; };
+		35CBFA252079B5760081D53F /* SelectingModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectingModelViewController.swift; sourceTree = "<group>"; };
 		35DF4B20B6D7732FC06382C0 /* il2cpp-codegen-il2cpp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "il2cpp-codegen-il2cpp.h"; path = "ARClay/Unity/Libraries/libil2cpp/include/codegen/il2cpp-codegen-il2cpp.h"; sourceTree = SOURCE_ROOT; };
 		35EF449B9E1AD9C06B9C5D20 /* Il2CppGenericContextCompare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Il2CppGenericContextCompare.h; path = ARClay/Unity/Libraries/libil2cpp/include/metadata/Il2CppGenericContextCompare.h; sourceTree = SOURCE_ROOT; };
 		35F4C8A2205ECABA00A0FA96 /* UnityUtils.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = UnityUtils.mm; path = ARClay/Unity/UnityUtils.mm; sourceTree = "<group>"; };
@@ -1216,6 +1218,7 @@
 				357BD6932059EA3E0059A302 /* AppDelegate.swift */,
 				357BD6972059EA3E0059A302 /* ViewController.swift */,
 				357BD6992059EA3E0059A302 /* Main.storyboard */,
+				35CBFA252079B5760081D53F /* SelectingModelViewController.swift */,
 				35CBFA212074401C0081D53F /* DrawingPickerViewController.swift */,
 				35F8058A2073C092009A650D /* CollectionViewCell.swift */,
 				357BD69E2059EA3E0059A302 /* LaunchScreen.storyboard */,
@@ -2209,7 +2212,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 357BD68B2059EA3E0059A302 /* Build configuration list for PBXProject "Unity-iPhone" */;
+			buildConfigurationList = 357BD68B2059EA3E0059A302 /* Build configuration list for PBXProject "ARClay" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -2218,7 +2221,7 @@
 				Base,
 			);
 			mainGroup = 357BD6872059EA3E0059A302;
-			productRefGroup = 357BD6912059EA3E0059A302;
+			productRefGroup = 357BD6912059EA3E0059A302 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -2234,9 +2237,9 @@
 			files = (
 				35C8E101205E47750047A0FF /* ARClay.xcconfig in Resources */,
 				357BD6962059EA3E0059A302 /* art.scnassets in Resources */,
-				357BD6A02059EA3E0059A302,
+				357BD6A02059EA3E0059A302 /* LaunchScreen.storyboard in Resources */,
 				357BD69D2059EA3E0059A302 /* Assets.xcassets in Resources */,
-				357BD69B2059EA3E0059A302,
+				357BD69B2059EA3E0059A302 /* Main.storyboard in Resources */,
 				35C8E0FD205E3F110047A0FF /* Unity in Resources */,
 				DBD74F9891BB925AC01AF12B /* libil2cpp.def in Resources */,
 				9E7A4AE5A7F109238DD9DE4E /* libil2cpp.icalls in Resources */,
@@ -2351,6 +2354,7 @@
 				7150486596D968AEA1D4155D /* Il2CppCompilerCalculateTypeValues_16Table.cpp in Sources */,
 				2F164253A985325A13C25AFC /* Il2CppCompilerCalculateTypeValues_17Table.cpp in Sources */,
 				1114475D8FE210B9C6D325FD /* Il2CppCompilerCalculateTypeValues_18Table.cpp in Sources */,
+				35CBFA262079B5770081D53F /* SelectingModelViewController.swift in Sources */,
 				0C14448A93F23BEC02DB19AC /* Il2CppCompilerCalculateTypeValues_19Table.cpp in Sources */,
 				DBC94EE6BA6EDD19DABCC614 /* Il2CppCompilerCalculateTypeValues_1Table.cpp in Sources */,
 				205E415FA226898D4B89C47D /* Il2CppCompilerCalculateTypeValues_20Table.cpp in Sources */,
@@ -2452,7 +2456,7 @@
 /* Begin XCBuildConfiguration section */
 		357BD6A22059EA3E0059A302 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35C8E100205E47750047A0FF;
+			baseConfigurationReference = 35C8E100205E47750047A0FF /* ARClay.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -2510,7 +2514,7 @@
 		};
 		357BD6A32059EA3E0059A302 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35C8E100205E47750047A0FF;
+			baseConfigurationReference = 35C8E100205E47750047A0FF /* ARClay.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -2594,7 +2598,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		357BD68B2059EA3E0059A302 /* Build configuration list for PBXProject "Unity-iPhone" */ = {
+		357BD68B2059EA3E0059A302 /* Build configuration list for PBXProject "ARClay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				357BD6A22059EA3E0059A302 /* Debug */,

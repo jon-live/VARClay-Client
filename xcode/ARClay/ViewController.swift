@@ -53,18 +53,6 @@ class ViewController: UIViewController {
     @objc func handleUnityReady() {
         showUnitySubView()
     }
-    
-//    @objc func handleUnityToggleRotation(_ n: NSNotification) {
-//        if let isOn = n.userInfo?["isOn"] as? NSNumber {
-////            rotateSwitch.isOn = isOn.boolValue
-//        }
-//    }
-    
-//    @IBAction func handleSwitchValueChanged(sender: UISwitch) {
-//        UnityPostMessage("NATIVE_BRIDGE", "RotateCube", sender.isOn ? "start" : "stop")
-//    }
-
-    
     func showUnitySubView() {
         if let unityView = UnityGetGLView() {
             // insert subview at index 0 ensures unity view is behind current UI view

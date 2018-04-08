@@ -12,4 +12,6 @@ class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var drawingImageView: UIImageView!
     @IBOutlet weak var drawingImageName: UILabel!
+    @IBOutlet weak var modelImageView: UIImageView!
+    @IBOutlet weak var modelImageName: UILabel!
 }
