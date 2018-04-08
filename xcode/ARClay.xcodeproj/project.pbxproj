@@ -44,9 +44,9 @@
 		357BD6942059EA3E0059A302 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357BD6932059EA3E0059A302 /* AppDelegate.swift */; };
 		357BD6962059EA3E0059A302 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 357BD6952059EA3E0059A302 /* art.scnassets */; };
 		357BD6982059EA3E0059A302 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357BD6972059EA3E0059A302 /* ViewController.swift */; };
-		357BD69B2059EA3E0059A302 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 357BD6992059EA3E0059A302 /* Main.storyboard */; };
+		357BD69B2059EA3E0059A302 = {isa = PBXBuildFile; fileRef = 357BD6992059EA3E0059A302 /* Main.storyboard */; };
 		357BD69D2059EA3E0059A302 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 357BD69C2059EA3E0059A302 /* Assets.xcassets */; };
-		357BD6A02059EA3E0059A302 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 357BD69E2059EA3E0059A302 /* LaunchScreen.storyboard */; };
+		357BD6A02059EA3E0059A302 = {isa = PBXBuildFile; fileRef = 357BD69E2059EA3E0059A302 /* LaunchScreen.storyboard */; };
 		35C8E0FD205E3F110047A0FF /* Unity in Resources */ = {isa = PBXBuildFile; fileRef = 35C8E0FC205E3F110047A0FF /* Unity */; };
 		35C8E101205E47750047A0FF /* ARClay.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 35C8E100205E47750047A0FF /* ARClay.xcconfig */; };
 		35CBFA222074401C0081D53F /* DrawingPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CBFA212074401C0081D53F /* DrawingPickerViewController.swift */; };
@@ -2212,7 +2212,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 357BD68B2059EA3E0059A302 /* Build configuration list for PBXProject "ARClay" */;
+			buildConfigurationList = 357BD68B2059EA3E0059A302 /* Build configuration list for PBXProject "Unity-iPhone" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -2221,7 +2221,7 @@
 				Base,
 			);
 			mainGroup = 357BD6872059EA3E0059A302;
-			productRefGroup = 357BD6912059EA3E0059A302 /* Products */;
+			productRefGroup = 357BD6912059EA3E0059A302;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -2237,9 +2237,9 @@
 			files = (
 				35C8E101205E47750047A0FF /* ARClay.xcconfig in Resources */,
 				357BD6962059EA3E0059A302 /* art.scnassets in Resources */,
-				357BD6A02059EA3E0059A302 /* LaunchScreen.storyboard in Resources */,
+				357BD6A02059EA3E0059A302,
 				357BD69D2059EA3E0059A302 /* Assets.xcassets in Resources */,
-				357BD69B2059EA3E0059A302 /* Main.storyboard in Resources */,
+				357BD69B2059EA3E0059A302,
 				35C8E0FD205E3F110047A0FF /* Unity in Resources */,
 				DBD74F9891BB925AC01AF12B /* libil2cpp.def in Resources */,
 				9E7A4AE5A7F109238DD9DE4E /* libil2cpp.icalls in Resources */,
@@ -2456,7 +2456,7 @@
 /* Begin XCBuildConfiguration section */
 		357BD6A22059EA3E0059A302 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35C8E100205E47750047A0FF /* ARClay.xcconfig */;
+			baseConfigurationReference = 35C8E100205E47750047A0FF;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -2514,7 +2514,7 @@
 		};
 		357BD6A32059EA3E0059A302 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35C8E100205E47750047A0FF /* ARClay.xcconfig */;
+			baseConfigurationReference = 35C8E100205E47750047A0FF;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -2598,7 +2598,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		357BD68B2059EA3E0059A302 /* Build configuration list for PBXProject "ARClay" */ = {
+		357BD68B2059EA3E0059A302 /* Build configuration list for PBXProject "Unity-iPhone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				357BD6A22059EA3E0059A302 /* Debug */,

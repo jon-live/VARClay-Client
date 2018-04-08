@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.iOS;
 using System.Runtime.InteropServices;
+using Random = UnityEngine.Random;
 
 
 public class PaintManager : MonoBehaviour
@@ -14,8 +16,8 @@ public class PaintManager : MonoBehaviour
 	private Color paintColor;
 	private Vector3 previousPosition;
 	private List<GameObject> gameObjectList;
-
-	
+	private GameObject[] gameObjects;
+	private List<String> objectStrings;	
 	
 //	public GameObject cubeObj;
 //	private Vector3 previousPosition;
@@ -106,11 +108,29 @@ public class PaintManager : MonoBehaviour
 				paintingOn = true;
 				gameObject = (GameObject) Resources.Load(commands[1], typeof(GameObject));
 				gameObject.GetComponent<Renderer>().material.color = paintColor;
+				objectStrings.Add(commands[1]);
 				break;
 			case "drawOff":
 				paintingOn = false;
 				break;
+			case "clear":
+				paintingOn = false;
+
+				DeleteGameObject("Cube");
+				DeleteGameObject("Sphere");
+				DeleteGameObject("Tree");
+				break;
 		}
 	}
+
+	private void DeleteGameObject(string tag)
+	{
+		gameObjects = GameObject.FindGameObjectsWithTag(tag);
+		foreach (var t in gameObjects)
+		{
+			Destroy(t);
+		}
+	}
+	
 	
 }

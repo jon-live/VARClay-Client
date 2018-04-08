@@ -66,6 +66,11 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func clearButton(_ sender: Any) {
+        let commands = "clear" + " " + drawingModel + " " + drawingColor
+        UnityPostMessage("PaintManager", "ReceiveCommand", commands)
+    }
+    
     @IBAction func unwindSegue(_ sender: UIStoryboardSegue) {
         if let senderVC = sender.source as? DrawingPickerViewController {
             drawingModel = senderVC.currentDrawingModel

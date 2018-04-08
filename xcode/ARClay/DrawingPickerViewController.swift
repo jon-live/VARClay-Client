@@ -43,6 +43,9 @@ class DrawingPickerViewController: UIViewController, UICollectionViewDelegate, U
         currentDrawingModel = "cube"
         // Init currentDrawingColor with default value "white"
         currentDrawingColor = "255-255-255"
+        
+        displayLabel.layer.borderColor = UIColor.black.cgColor
+        displayLabel.layer.borderWidth = 1
         collectionView.dataSource = self
         collectionView.delegate = self
         var layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
