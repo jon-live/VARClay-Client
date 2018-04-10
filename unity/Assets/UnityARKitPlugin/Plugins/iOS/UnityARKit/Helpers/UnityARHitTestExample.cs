@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
 
 namespace UnityEngine.XR.iOS
 {
@@ -8,6 +9,7 @@ namespace UnityEngine.XR.iOS
 		public Transform m_HitTransform;
 		public float maxRayDistance = 30.0f;
 		public LayerMask collisionLayer = 1 << 10;  //ARKitPlane layer
+		private bool isDetecting;
 
         bool HitTestWithResultType (ARPoint point, ARHitTestResultType resultTypes)
         {
@@ -23,11 +25,32 @@ namespace UnityEngine.XR.iOS
             }
             return false;
         }
+
+		public void Start()
+		{
+			isDetecting = true;
+		}
+
+		public void DetectionOff()
+		{
+			isDetecting = false;
+		}
+
+		private bool IsPointOverUIObject()
+		{
+			PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+			eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+			List<RaycastResult> results = new List<RaycastResult>();
+			EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+			return results.Count > 0;
+		}
 		
 		// Update is called once per frame
 		void Update () {
 			#if UNITY_EDITOR   //we will only use this script on the editor side, though there is nothing that would prevent it from working on device
-			if (Input.GetMouseButtonDown (0)) {
+			if (Input.GetMouseButtonDown (0))
+			{
+				Debug.Log("Button CCCCC");
 				Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 				RaycastHit hit;
 				
@@ -46,7 +69,7 @@ namespace UnityEngine.XR.iOS
 			if (Input.touchCount > 0 && m_HitTransform != null)
 			{
 				var touch = Input.GetTouch(0);
-				if (touch.phase == TouchPhase.Began || touch.phase == TouchPhase.Moved)
+				if ((touch.phase == TouchPhase.Began || touch.phase == TouchPhase.Moved) && isDetecting == true && !IsPointOverUIObject())
 				{
 					var screenPosition = Camera.main.ScreenToViewportPoint(touch.position);
 					ARPoint point = new ARPoint {

@@ -115,6 +115,7 @@
 		B38146EB9EC17BFECB72A43C /* Il2CppAttributes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62BD4536A539FD962176AF04 /* Il2CppAttributes.cpp */; };
 		B5424298A18C96A3BCB695C2 /* Bulk_Generics_2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC7548358DF6F68D232899FD /* Bulk_Generics_2.cpp */; };
 		B5504BD09F2560EC91016576 /* UnityAppController+ViewHandling.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2F544F2893BB45450D463159 /* UnityAppController+ViewHandling.mm */; };
+		B5DB4752BF61DF46C7848100 /* Il2CppCompilerCalculateTypeValues_31Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70304D14AC7B4ADF152D457F /* Il2CppCompilerCalculateTypeValues_31Table.cpp */; };
 		B6AF46F89DADDEF530944E4D /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 348748FA9E51E57A2CEC0E17 /* main.mm */; };
 		B6C44C7A9429AC190280239B /* Bulk_Assembly-CSharp_4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2C6947AE8D5DFB726F4D4559 /* Bulk_Assembly-CSharp_4.cpp */; };
 		B91E406B862C684EFE7FDE38 /* Il2CppCompilerCalculateTypeValuesTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5B44DC6BB22B56021D13134 /* Il2CppCompilerCalculateTypeValuesTable.cpp */; };
@@ -454,6 +455,7 @@
 		6F1D46269ECD2D8099AEC5D7 /* MetadataLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MetadataLoader.h; path = ARClay/Unity/Libraries/libil2cpp/include/vm/MetadataLoader.h; sourceTree = SOURCE_ROOT; };
 		6F214DE89DAC078BD57B9A53 /* RuntimeType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RuntimeType.h; path = ARClay/Unity/Libraries/libil2cpp/include/icalls/mscorlib/System/RuntimeType.h; sourceTree = SOURCE_ROOT; };
 		6F4841B685774A8DC8BA7859 /* Il2CppCompilerCalculateTypeValues_29Table.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppCompilerCalculateTypeValues_29Table.cpp; path = ARClay/Unity/Classes/Native/Il2CppCompilerCalculateTypeValues_29Table.cpp; sourceTree = SOURCE_ROOT; };
+		70304D14AC7B4ADF152D457F /* Il2CppCompilerCalculateTypeValues_31Table.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppCompilerCalculateTypeValues_31Table.cpp; path = ARClay/Unity/Classes/Native/Il2CppCompilerCalculateTypeValues_31Table.cpp; sourceTree = SOURCE_ROOT; };
 		71C4423D90EBF48819C77CDA /* LifeCycleListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LifeCycleListener.h; path = ARClay/Unity/Classes/PluginBase/LifeCycleListener.h; sourceTree = SOURCE_ROOT; };
 		71F843A1B13872C061734918 /* Encoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Encoding.h; path = ARClay/Unity/Libraries/libil2cpp/include/os/Encoding.h; sourceTree = SOURCE_ROOT; };
 		733A435EBFC5DF96E45B030F /* DirectoryUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DirectoryUtils.h; path = ARClay/Unity/Libraries/libil2cpp/include/utils/DirectoryUtils.h; sourceTree = SOURCE_ROOT; };
@@ -1154,6 +1156,7 @@
 				64A148A28C83B075C6B8DF55 /* UnityClassRegistration.cpp */,
 				934C464BA40CC525E89B979C /* UnityICallRegistration.cpp */,
 				78AF4953B39037E50E836319 /* UnresolvedVirtualCallStubs.cpp */,
+				70304D14AC7B4ADF152D457F /* Il2CppCompilerCalculateTypeValues_31Table.cpp */,
 			);
 			path = Native;
 			sourceTree = "<group>";
@@ -2429,6 +2432,7 @@
 				8D4B446780BEE34D11C2B71E /* RegisterFeatures.cpp in Sources */,
 				DEB642A2B9BD8175AC6A507B /* RegisterMonoModules.cpp in Sources */,
 				73C74BB7A0362835B29CCB4B /* ARSessionNative.mm in Sources */,
+				B5DB4752BF61DF46C7848100 /* Il2CppCompilerCalculateTypeValues_31Table.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
