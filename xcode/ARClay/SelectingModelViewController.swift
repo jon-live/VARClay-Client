@@ -16,8 +16,8 @@ class SelectingModelViewController: UIViewController, UICollectionViewDelegate, 
     
     let models = ["Tree", "Car"]
     let modelImages: [UIImage] = [
-        UIImage(named: "tree")!,
-        UIImage(named: "car")!,
+        UIImage(named: "Tree")!,
+        UIImage(named: "Car")!,
     ]
 
     override func viewDidLoad() {

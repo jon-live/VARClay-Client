@@ -113,6 +113,29 @@ namespace UnityEngine.XR.iOS
 			}
 			#endif
 		}
+		
+		
+		private void ChangePrefab(string newPrefab)
+		{
+			Debug.Log("Changed prefab");
+			this.playerPrefab = (GameObject)Resources.Load("/Resources/" + newPrefab);
+		}
+
+		private void LockDectingPlane(string command)
+		{
+			if (command == "lock")
+			{
+				UnityARSessionNativeInterface m_session = UnityARSessionNativeInterface.GetARSessionNativeInterface();
+				UnityARPlaneDetection planeDetection = UnityARPlaneDetection.None;
+				ARKitWorldTrackingSessionConfiguration config = new ARKitWorldTrackingSessionConfiguration();
+				config.planeDetection = planeDetection;
+				config.alignment = UnityARAlignment.UnityARAlignmentGravity;
+				config.getPointCloudData = false;
+				config.enableLightEstimation = false;
+				m_session.RunWithConfig (config);
+			}
+		}
+		
 	}
 }
 

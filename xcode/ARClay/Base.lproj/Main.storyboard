@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14105" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14111" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -98,12 +98,12 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9b4-ga-1tV" userLabel="Draw">
-                                <rect key="frame" x="183" y="658" width="48" height="48"/>
+                                <rect key="frame" x="183" y="668" width="48" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="shutter"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2k-v4-S5S" userLabel="Add">
-                                <rect key="frame" x="61" y="658" width="48" height="48"/>
+                                <rect key="frame" x="26" y="668" width="48" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="add"/>
                                 <connections>
@@ -111,7 +111,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3af-Z6-wKF" userLabel="colorPalett">
-                                <rect key="frame" x="329" y="658" width="48" height="48"/>
+                                <rect key="frame" x="346" y="668" width="48" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="colorPalett"/>
                                 <connections>
@@ -119,11 +119,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhz-dH-UdX" userLabel="Clear">
-                                <rect key="frame" x="371" y="47" width="20" height="23"/>
+                                <rect key="frame" x="358" y="47" width="36" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="restart"/>
                                 <connections>
                                     <action selector="clearButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="x0W-nw-cYG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gua-Sz-Zh7" userLabel="Lock">
+                                <rect key="frame" x="20" y="47" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="lock"/>
+                                <connections>
+                                    <action selector="lockPlaneDetection:" destination="BV1-FR-VrT" eventType="touchUpInside" id="2w5-lm-eVa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -136,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="57" y="118"/>
+            <point key="canvasLocation" x="56.521739130434788" y="117.39130434782609"/>
         </scene>
         <!--Drawing Picker-->
         <scene sceneID="bb6-mb-d5i">
@@ -284,6 +292,7 @@
     <resources>
         <image name="add" width="48" height="48"/>
         <image name="colorPalett" width="48" height="48"/>
+        <image name="lock" width="128" height="128"/>
         <image name="restart" width="20" height="23"/>
         <image name="shutter" width="48" height="48"/>
     </resources>

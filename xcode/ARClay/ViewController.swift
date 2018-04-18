@@ -15,11 +15,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var drawButton: UIButton!
     var drawingModel: String!
     var drawingColor: String!
+    var selectedModel: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         drawingModel = "Cube"
         drawingColor = "255-255-255"
+        selectedModel = "Tree"
 
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
             appDelegate.startUnity()
@@ -71,10 +73,21 @@ class ViewController: UIViewController {
         UnityPostMessage("PaintManager", "ReceiveCommand", commands)
     }
     
+    
+    @IBAction func lockPlaneDetection(_ sender: Any) {
+        UnityPostMessage("HitManager", "LockDectingPlane", "lock")
+
+    }
+    
     @IBAction func unwindSegue(_ sender: UIStoryboardSegue) {
         if let senderVC = sender.source as? DrawingPickerViewController {
             drawingModel = senderVC.currentDrawingModel
             drawingColor = senderVC.currentDrawingColor
+        }
+        if let anotherSenderVC = sender.source as? SelectingModelViewController {
+            selectedModel = anotherSenderVC.currentModel
+            // Send current model to unity
+            UnityPostMessage("HitManager", "ChangePrefab", selectedModel)
         }
     }
 }
