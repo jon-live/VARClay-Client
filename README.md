@@ -43,5 +43,16 @@
 
 
 
+### VR AR Position Mapping
+![Position Mapping](diagrams/Position_Mapping.png)
+```
+deltaX = 115;
+deltaZ = 90;
+VR_Position_X = AR_Position_X / (1 / 2) * 115 + deltaX;
+VR_Position_Y = AR_Position_Y / (1 / 2) * 115 + deltaY;
+```
+
+
+
 
 
