@@ -23,6 +23,7 @@ namespace UnityEngine.XR.iOS
 		            {
 			            previousObject.transform.position = UnityARMatrixOps.GetPosition(hitResult.worldTransform);
 			            previousObject.transform.rotation = UnityARMatrixOps.GetRotation(hitResult.worldTransform);
+			            Debug.Log (previousObject.transform.position);
 			            return true;
 		            }
 	            }
@@ -30,9 +31,9 @@ namespace UnityEngine.XR.iOS
 	            {
 		            GameObject go = PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(0, 0, 0), Quaternion.identity, 0);
 		            foreach (var hitResult in hitResults) {
-			            Debug.Log ("Got hit!");
 			            go.transform.position = UnityARMatrixOps.GetPosition (hitResult.worldTransform);
 			            go.transform.rotation = UnityARMatrixOps.GetRotation (hitResult.worldTransform);
+			            Debug.Log (go.transform.position);
 			            return true;
 		            }
 	            }
@@ -66,15 +67,16 @@ namespace UnityEngine.XR.iOS
 					GameObject previousObject = GameObject.FindWithTag(this.playerPrefab.name);
 					if (previousObject != null)
 					{
-						Debug.Log(hit.point);
 						previousObject.transform.position = hit.point;
 						previousObject.transform.rotation = hit.transform.rotation;
+						Debug.Log(previousObject.transform.position);
 					}
 					else
 					{
 						GameObject go = PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(0, 0, 0), Quaternion.identity, 0);
 						go.transform.position = hit.point;
 						go.transform.rotation = hit.transform.rotation;
+						Debug.Log(go.transform.position);
 					}
 				}
 
